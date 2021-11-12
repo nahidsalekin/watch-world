@@ -1,0 +1,18 @@
+.header a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+.navbar .nav-link {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.navbar .nav-link:hover {
+    border-bottom: 5px solid rgb(114, 182, 114);
+}

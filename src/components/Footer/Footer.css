@@ -1,0 +1,19 @@
+.footer-container {
+    background-color: rgba(94, 137, 156, 0.164);
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.footer-container .nav-link {
+    width: 200px;
+    padding: 10px 30px;
+    border: 1px solid gainsboro;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.footer-container .nav-link:hover {
+    background-color: rgb(138, 223, 223);
+    transform: scale(1.1);
+}

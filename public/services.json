@@ -1,0 +1,51 @@
+[{
+        "_id": { "$oid": "617d79a459c8ee9138d65577" },
+        "name": "Tanguar Hoar",
+        "cost": "2500",
+        "duration": "2 days 1 night",
+        "img": "https://www.travelmate.com.bd/wp-content/uploads/2019/06/Tanguar-Haor-Sunamganj-768x512.jpg",
+        "short_desc": "Tanguar Haor is a perfect place for a group or family tour. The beauty of this place will give you awesome feelings. Hopefully, you can go to Tanguar Haor within a tight budget."
+    },
+    {
+        "_id": { "$oid": "617d79a459c8ee9138d65577" },
+        "name": "Saint Martin",
+        "cost": "4500",
+        "duration": "3 days 2 night",
+        "img": "https://avijatrik.org/wp-content/uploads/2019/06/large_Picture_187-870x555.jpg",
+        "short_desc": "Saint Martin is one of the few coral islands in the world. Saint martin island in Bangladesh is called the blue heaven. Find the best hotels in st. martin & complete tour packages. Surrounding blue water, the island is way more gorgeous than you can imagine."
+    },
+    {
+        "_id": { "$oid": "617d79a459c8ee9138d65577" },
+        "name": "Ratargul Holiday Home – Sylhet",
+        "cost": "4600",
+        "duration": "2 days 2 night",
+        "img": "https://avijatrik.org/wp-content/uploads/2020/08/KAA_0192-870x555.jpg",
+        "short_desc": "Unique Architecture & Home: The Guest House is a complete house with all necessary facilities. It is not designed as a cottage or resort. You’ll definitely feel like home in this duplex house."
+    },
+    {
+        "_id": { "$oid": "617d79a459c8ee9138d65577" },
+        "name": "Breathtaking Bandarban Exploration",
+        "cost": "4200",
+        "duration": "2 days 1 night",
+        "img": "https://avijatrik.org/wp-content/uploads/2019/06/1-4-870x555.jpg",
+        "short_desc": "Bandarban Hill District is blissed with beauties & culture. You’ll find great mountain views in bandarban. It treks through virgin forests and chance to meet more than 15 tribes. Bandarban town which lies on the Sangu River, 92km from Chittagong. The river is the center of local life: epically long bamboo rafts, steered by a solitary boatman."
+    },
+    {
+        "_id": { "$oid": "617d79a459c8ee9138d65577" },
+        "name": "Sitakunda Travel: Hill, Waterfall, Beach",
+        "cost": "4500",
+        "duration": "3 days 2 night",
+        "img": "https://www.travelmate.com.bd/wp-content/uploads/2021/05/bhatiari-lake-chittagong.jpg",
+        "short_desc": "Sitakunda is an upazila in Chittagong which is currently at the peak of popularity among tourists. Fountains, mountains, Waterfalls, Beach, clouds, you can enjoy everything from here? Actually, this is the reason why innumerable tourists are going to Sitakundo every day."
+    },
+    {
+        "_id": { "$oid": "617d79a459c8ee9138d65577" },
+        "name": "Cox’s Bazar Tour: The Beach Holiday",
+        "cost": "5500",
+        "duration": "3 days 2 night",
+        "img": "https://lh3.googleusercontent.com/proxy/9uxCHOWNW7WtrlKrgGcvdODKuZ1hJLDMECHGKU2AO7uUsXNlReWAsOJro1lvrzQYqnUv17qjCk96Ms0KEJMBnxkzP7xx8A93au6Cq3G3nIJr_9O6QkY_Ik27oTIacOHa7wPfpaJp0TvF",
+        "short_desc": "As the longest sea beach in the world, Cox’s Bazar is considered the most popular tourist destination in Bangladesh. Do you know Cox’s Bazar is familiar as the tourist capital of Bangladesh? Yes! If you consider blue water beauty, accommodation solution, security, and fresh seafood, this natural sandy sea beach is the most amazing place to travel again and again."
+    },
+
+
+]
