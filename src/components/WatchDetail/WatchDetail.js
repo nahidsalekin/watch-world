@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
-import { Link } from 'react-router-dom';
-import { useForm } from "react-hook-form";
 import axios from 'axios';
-import useAuth from '../hook/useAuth';
+import useAuth from '../../hooks/useAuth';
 const WatchDetail = () => {
     const { id } = useParams();
     const { user } = useAuth();
@@ -35,7 +33,8 @@ const WatchDetail = () => {
         data.date = newDate;
         data.address = order.address;
         data.number = order.number;
-        console.log(data);
+        data.status = 'pending';
+        data.username = order.username ? order.name : user.displayName;
 
         axios.post('http://localhost:5000/place_order', data)
             .then(res => {
@@ -60,9 +59,24 @@ const WatchDetail = () => {
                 <h4>Please provide these information to confirm purchase</h4>
                 <form onSubmit={handleOnSubmit} className="row mx-0 d-flex p-3">
 
-                    <div> <label className="mb-1">
-                        <h6 className="mb-0 text-sm">Phone Number</h6>
-                    </label> <input className="mb-4" type="text" onChange={handleonChange} name="number" placeholder="Enter your Phone Number" /> </div>
+                    <div>
+                        <label className="mb-1">
+                            <h6 className="mb-0 text-sm">Name</h6>
+                        </label>
+                        <input className="mb-4" type="text" defaultValue={user.displayName} onChange={handleonChange} name="username" placeholder="Enter your fullname" />
+                    </div>
+                    <div>
+                        <label className="mb-1">
+                            <h6 className="mb-0 text-sm">Email Address</h6>
+                        </label>
+                        <input className="mb-4" type="email" value={user.email} disabled /> </div>
+
+                    <div>
+                        <label className="mb-1">
+                            <h6 className="mb-0 text-sm">Phone Number</h6>
+                        </label>
+                        <input className="mb-4" type="text" onChange={handleonChange} name="number" placeholder="Enter your Phone Number" /> </div>
+
                     <div className="mb-3"> <label className="mb-1">
                         <h6 className="mb-0 text-sm">Address</h6>
                     </label> <input type="text" onChange={handleonChange} name="address" placeholder="Enter your address" />

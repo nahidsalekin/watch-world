@@ -1,0 +1,16 @@
+.dashboard-links {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(163, 233, 236, 0.226);
+}
+
+.dashboard-links .link-item {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.dashboard-links .link-item:hover {
+    border-bottom: 5px solid #61c895;
+    transform: scale(1.2);
+}

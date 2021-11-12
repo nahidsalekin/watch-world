@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom'
-import useAuth from '../hook/useAuth';
+import useAuth from '../../hooks/useAuth';
 const Header = () => {
     const { user, logout } = useAuth();
 
@@ -21,8 +21,14 @@ const Header = () => {
                             <Link className="nav-link" to="/home">Home</Link>
                         </li>
                         <li>
-                            <Link className="nav-link" to="/services">Services</Link>
+                            <Link className="nav-link" to="/explore">Explore</Link>
                         </li>
+
+                        {user?.email &&
+                            <li>
+                                <Link className="nav-link" to="/dashboard">Dashboard</Link>
+                            </li>
+                        }
 
                         {!user?.email &&
                             <li>
@@ -30,29 +36,12 @@ const Header = () => {
                             </li>
                         }
                         {user?.email &&
-                            <li class="nav-item dropdown">
-                                <div class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {user.displayName}
-                                    <img class="ms-2 rounded-circle" src={user.photoURL}
-                                        width="40" height="40" alt="" />
-                                </div>
-                                <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">
-                                    <li>
-                                        <Link className="nav-link" to="/orders">My Order</Link>
-                                    </li>
-                                    <li>
-                                        <Link className="nav-link" to="/manage_order">Manage Orders</Link>
-                                    </li>
-                                    <li>
-                                        <Link className="nav-link" to="/Add Event">Add Service</Link>
-                                    </li>
-                                    <li>
-                                        <button onClick={logout} class="dropdown-item text-center">
-                                            Logout</button>
-                                    </li>
-
-                                </ul>
-                            </li>}
+                            <li>
+                                <span className="nav-link">{user.displayName}
+                                    <button type="button" className="ms-2 btn btn-sm btn-outline-danger" onClick={logout}>Logout</button>
+                                </span>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

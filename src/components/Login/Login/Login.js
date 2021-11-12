@@ -1,7 +1,7 @@
 import '../Login.css'
 import { React, useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
-import useAuth from '../../hook/useAuth';
+import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
     const { user, loginUser, isLoading, authError, googleSignIn } = useAuth();

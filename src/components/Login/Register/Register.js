@@ -1,7 +1,7 @@
 import '../Login.css'
 import { React, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import useAuth from '../../hook/useAuth';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
@@ -54,7 +54,7 @@ const Register = () => {
                             </label> <input type="password" onKeyUp={handleonBlur} name="password" placeholder="Enter password" />
                             </div>
 
-                            <div className="row my-3 px-3 justify-content-center"> <button type="submit" className="btn btn-primary text-center">Login</button> </div>
+                            <div className="row my-3 px-3 justify-content-center"> <button type="submit" className="btn btn-primary text-center">Register</button> </div>
                             <div className="row mb-4 px-3"> <small className="font-weight-bold">Already have an account? <Link to="/login" className="text-danger ">Login</Link></small> </div>
                         </div>
                     </div>
