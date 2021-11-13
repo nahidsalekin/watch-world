@@ -5,7 +5,7 @@ const ManageProducts = () => {
     const [watches, setWatches] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/watches?limit=${0}`)
+        fetch(`https://salty-basin-31603.herokuapp.com/watches?limit=${0}`)
             .then(res => res.json())
             .then(data => {
                 setWatches(data)
@@ -14,7 +14,7 @@ const ManageProducts = () => {
 
     const deleteItem = id => {
         if (window.confirm('Are you confirm to cancel this order?')) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://salty-basin-31603.herokuapp.com/watches/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json'
@@ -30,11 +30,12 @@ const ManageProducts = () => {
         }
         console.log(id)
     }
+
     return (
         <div className="mt-5 row mx-0 g-3 text-center">
             <h4>All Products: </h4>
             {
-                watches.map((watch) => <Watch key={watch._id} watch={watch}></Watch>)
+                watches.map((watch) => <Watch key={watch._id} action={deleteItem} type={'delete'} watch={watch}></Watch>)
             }
 
         </div>

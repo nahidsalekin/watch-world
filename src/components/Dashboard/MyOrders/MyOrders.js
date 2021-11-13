@@ -6,7 +6,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://salty-basin-31603.herokuapp.com/orders?email=${user.email}`)
             .then(res => {
                 return res.json();
             })
@@ -17,7 +17,7 @@ const MyOrders = () => {
 
     const deleteItem = id => {
         if (window.confirm('Are you confirm to cancel this order?')) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://salty-basin-31603.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json'

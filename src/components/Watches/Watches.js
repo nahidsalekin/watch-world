@@ -10,7 +10,7 @@ const Watches = () => {
 
     console.log(location.pathname, limit)
     useEffect(() => {
-        fetch(`http://localhost:5000/watches?limit=${limit}`)
+        fetch(`https://salty-basin-31603.herokuapp.com/watches?limit=${limit}`)
             .then(res => res.json())
             .then(data => {
                 setWatches(data)

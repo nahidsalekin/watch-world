@@ -2,6 +2,7 @@ import React from 'react';
 import banner1 from '../../images/banner-1.jpg';
 import banner2 from '../../images/banner-2.jpg';
 import banner3 from '../../images/banner-3.jpg';
+import Reviews from '../Reviews/Reviews';
 import Watches from '../Watches/Watches';
 const Home = () => {
     return (
@@ -37,8 +38,10 @@ const Home = () => {
                 <Watches></Watches>
             </div>
 
+            <Reviews />
 
-            <div className="my-5">
+
+            <div className="my-5 bg-info py-5">
                 <h4 className="text-center">Subscribe and get notified about upcomig products</h4>
                 <form className="text-start border border-secondary w-50 mx-auto p-5">
                     <div className="mb-3">

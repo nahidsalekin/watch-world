@@ -15,6 +15,7 @@ import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
 import MyOrders from '../MyOrders/MyOrders';
 import ManageOrders from '../ManageOrders/ManageOrders';
 import ManageProducts from '../ManageProducts/ManageProducts';
+import AddReview from '../AddReview/AddReview';
 const Dashboard = () => {
     const { path, url } = useRouteMatch();
     const { admin } = useAuth();
@@ -24,7 +25,6 @@ const Dashboard = () => {
             {admin ?
                 <div className="dashboard-links mx-auto shadow mb-5">
                     <Link className="link-item" to={`${url}`}>Dashboard</Link>
-
                     <Link className="link-item" to={`${url}/makeAdmin`}>Make Admin</Link>
                     <Link className="link-item" to={`${url}/manageOrders`}>Manage Orders</Link>
                     <Link className="link-item" to={`${url}/manageProducts`}>Manage Products</Link>
@@ -33,8 +33,8 @@ const Dashboard = () => {
                 :
                 <div className="dashboard-links mx-auto mb-5">
                     <Link className="link-item" to={`${url}`}>Dashboard</Link>
-
                     <Link className="link-item" to={`${url}/myOrders`}>My Orders</Link>
+                    <Link className="link-item" to={`${url}/addReview`}>Add Review</Link>
                 </div>
             }
 
@@ -44,6 +44,9 @@ const Dashboard = () => {
                 </Route>
                 <PrivateRoute path={`${path}/myOrders`}>
                     <MyOrders></MyOrders>
+                </PrivateRoute>
+                <PrivateRoute path={`${path}/addReview`}>
+                    <AddReview></AddReview>
                 </PrivateRoute>
                 <AdminRoute path={`${path}/makeAdmin`}>
                     <MakeAdmin></MakeAdmin>

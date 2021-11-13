@@ -5,7 +5,7 @@ const ManageOrders = () => {
     const [updateStatus, setUpdateStatus] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders`)
+        fetch(`https://salty-basin-31603.herokuapp.com/orders`)
             .then(res => {
                 return res.json();
             })
@@ -17,7 +17,7 @@ const ManageOrders = () => {
 
     const deleteItem = id => {
         if (window.confirm('Are you confirm to delete this order?')) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://salty-basin-31603.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json'
@@ -36,7 +36,7 @@ const ManageOrders = () => {
     const shipItem = id => {
 
         if (window.confirm('Are you confirm to ship this order?')) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://salty-basin-31603.herokuapp.com/orders/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -63,6 +63,7 @@ const ManageOrders = () => {
                         <th scope="col">Product Name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Purchased At</th>
+                        <th scope="col">Purchased By</th>
                         <th scope="col">Status</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -74,6 +75,7 @@ const ManageOrders = () => {
                             <td>{order.name}</td>
                             <td>{order.price}$</td>
                             <td>{order.date}</td>
+                            <td>{order.username}</td>
                             <td>{order.status}</td>
                             <td>
                                 <button className="btn btn-sm btn-danger" onClick={() => deleteItem(order._id)}>Delete</button>

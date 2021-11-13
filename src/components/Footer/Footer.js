@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-container">
             <h4 className="fw-bold border-bottom border-secondary pb-1">A Smartwatch makes you smarter than others</h4>
             <div className="row mx-0">
-                <div className="col-md-4">
+                <div className="col-md-4 d-flex flex-column justify-content-center">
 
                     <h5>About</h5>
 

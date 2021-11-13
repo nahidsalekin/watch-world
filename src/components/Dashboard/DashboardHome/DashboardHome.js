@@ -2,8 +2,8 @@ import React from 'react';
 
 const DashboardHome = () => {
     return (
-        <div>
-            <h3>this is dashboard home</h3>
+        <div className="py-5 my-5 text-center">
+            <h3>Welcome to Dashboard</h3>
         </div>
     );
 };

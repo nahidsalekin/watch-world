@@ -10,12 +10,12 @@ const WatchDetail = () => {
     const [order, setOrder] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/watches/${id}`)
+        fetch(`https://salty-basin-31603.herokuapp.com/watches/${id}`)
             .then(res => res.json())
             .then(data => setWatch(data))
     }, []);
 
-    const handleonChange = e => {
+    const handleonBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newOrder = { ...order }
@@ -34,9 +34,10 @@ const WatchDetail = () => {
         data.address = order.address;
         data.number = order.number;
         data.status = 'pending';
-        data.username = order.username ? order.name : user.displayName;
+        data.username = order.username ? order.username : user.displayName;
+        console.log(data);
 
-        axios.post('http://localhost:5000/place_order', data)
+        axios.post('https://salty-basin-31603.herokuapp.com/place_order', data)
             .then(res => {
                 if (res.data.insertedId)
                     alert('successfully booked your order');
@@ -63,7 +64,7 @@ const WatchDetail = () => {
                         <label className="mb-1">
                             <h6 className="mb-0 text-sm">Name</h6>
                         </label>
-                        <input className="mb-4" type="text" defaultValue={user.displayName} onChange={handleonChange} name="username" placeholder="Enter your fullname" />
+                        <input className="mb-4" type="text" defaultValue={user.displayName} onBlur={handleonBlur} name="username" placeholder="Enter your fullname" />
                     </div>
                     <div>
                         <label className="mb-1">
@@ -75,11 +76,11 @@ const WatchDetail = () => {
                         <label className="mb-1">
                             <h6 className="mb-0 text-sm">Phone Number</h6>
                         </label>
-                        <input className="mb-4" type="text" onChange={handleonChange} name="number" placeholder="Enter your Phone Number" /> </div>
+                        <input className="mb-4" type="text" onBlur={handleonBlur} name="number" placeholder="Enter your Phone Number" /> </div>
 
                     <div className="mb-3"> <label className="mb-1">
                         <h6 className="mb-0 text-sm">Address</h6>
-                    </label> <input type="text" onChange={handleonChange} name="address" placeholder="Enter your address" />
+                    </label> <input type="text" onBlur={handleonBlur} name="address" placeholder="Enter your address" />
                     </div>
                     <button type="submit" className="btn btn-primary text-center">Confirm Purchase</button>
                 </form>
